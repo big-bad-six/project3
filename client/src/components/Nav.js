@@ -1,11 +1,17 @@
 import React from 'react'
 
-export default function Nav() {
+/*Building navbar boiler plate links. Add page name on line 10 and 11 */
+export default function Nav({changePage, curPage}) {
     return (
         <nav className="nav">
             <h1>Meme Generator</h1>
             <div className="links">
-                <a href="/">Log In/Sign Up</a>
+            <a
+          href=""
+          onClick={() => changePage("")}
+          className={
+            curPage === "" ? "nav-link active" : "nav-link"
+          }>Log In/Sign Up</a>
             </div>
         </nav>
     )
