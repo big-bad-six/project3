@@ -1,4 +1,4 @@
-//change profiles
-const Profile = require('./Profile');
+const MemeImage = require('./MemeImage');
+const MemeText = require('./MemeText');
 
-module.exports = { Profile };
+module.exports = { MemeImage, MemeText };
