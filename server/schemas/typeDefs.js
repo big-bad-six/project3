@@ -7,8 +7,15 @@ const typeDefs = gql`
     skills: [String]!
   }
 
+  type MemeImage {
+    _id: ID
+    desc: String
+    url: String!
+  }
+
   type Query {
     profiles: [Profile]!
+    memeimages: [MemeImage]!
     profile(profileId: ID!): Profile
   }
 

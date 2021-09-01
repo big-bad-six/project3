@@ -1,12 +1,16 @@
 // BAD
 // models> index, models> profile
 // schemas> resolvers, schemas> typeDefs will all have to be changed
-const { Profile } = require('../models');
+const { Profile, MemeImage } = require('../models');
 
 const resolvers = {
   Query: {
     profiles: async () => {
       return Profile.find();
+    },
+
+    memeimages: async () => {
+      return MemeImage.find();
     },
 
     profile: async (parent, { profileId }) => {
