@@ -6,20 +6,15 @@ function Navbar() {
   return (
     <BrowserRouter>
       <Route>
-        <nav>
+        <nav className="navbar">
           <div className="navbar-container">
             <Link to="/" className="navbar-logo">
               MEME GENERATOR
             </Link>
             <ul>
               <li>
-                <Link to='/sign-in' className='nav-links'>
-                  Sign In
-                </Link>
-              </li>
-              <li>
-                <Link to='/sign-up' className='nav-links'>
-                  Sign Up
+                <Link to='/' className='nav-links'>
+                  Log In/Sign Up
                 </Link>
               </li>
             </ul>

@@ -1,12 +1,12 @@
 body {
-  background: #170d53;
+  background: #212d40;
   color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .card {
-   display: inherit;
-  background-color: rgb(28, 177, 214);
+  display: inherit;
+  background-color: rgb(134, 134, 134);
   border-radius: 15px;
   max-width: 300px;
   padding: 10px;

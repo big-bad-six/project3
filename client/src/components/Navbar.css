@@ -1,0 +1,44 @@
+body {
+  --color-primary: #364156;
+  --color-primary-dark: #11151c;
+  --color-secondary: #212d40;
+  --color-bright: #d66853;
+  --color-light: #e0e1dd;
+  --border-radius: 4px;
+}
+
+.navbar {
+  background: var(--color-light);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  color: var(--color-primary-dark);
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  color: rgb(183, 228, 199);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}

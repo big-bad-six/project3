@@ -1,6 +1,7 @@
 import './App.css';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Card from './components/Card';
+import SignIn from './pages/SignIn';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -10,7 +11,8 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <Card />
+      <Card />
+      <SignIn />
     </ApolloProvider>
   );
 }
