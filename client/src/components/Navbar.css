@@ -1,8 +1,5 @@
 .navbar {
   background: var(--color-light);
-  height: 80px;
-  display: flex;
-  align-items: center;
   font-size: 1.2rem;
   z-index: 999;
 }
@@ -11,6 +8,9 @@
   display: flex;
   height: 80px;
   max-width: 1500px;
+  align-items: center;
+  flex-direction: row;
+	justify-content: space-between;
 }
 
 .navbar-logo {
@@ -23,9 +23,13 @@
   align-items: center;
 }
 
-.nav-links {
-  color: rgb(183, 228, 199);
+.main-nav{
+  list-style: none;
   display: flex;
+}
+
+.nav-links {
+  color: var(--color-green);
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;

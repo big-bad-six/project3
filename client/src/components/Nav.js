@@ -9,7 +9,7 @@ function Navbar() {
         <Link to="/" className="navbar-logo">
           MEME GENERATOR
         </Link>
-        <ul>
+        <ul class="main-nav">
           <li>
             <Link to='/' className='nav-links'>
               Log In/Sign Up
