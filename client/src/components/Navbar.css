@@ -1,20 +1,9 @@
-body {
-  --color-primary: #364156;
-  --color-primary-dark: #11151c;
-  --color-secondary: #212d40;
-  --color-bright: #d66853;
-  --color-light: #e0e1dd;
-  --border-radius: 4px;
-}
-
 .navbar {
   background: var(--color-light);
   height: 80px;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
-  top: 0;
   z-index: 999;
 }
 

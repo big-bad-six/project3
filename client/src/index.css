@@ -1,7 +1,23 @@
 body {
   background: #212d40;
   color: rgb(255, 255, 255);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  --color-primary: #364156;
+  --color-primary-dark: #11151c;
+  --color-secondary: #212d40;
+  --color-bright: #d66853;
+  --color-light: #e0e1dd;
+  --border-radius: 4px;
+  margin: 0;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .card {

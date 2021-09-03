@@ -1,16 +1,3 @@
-body {
-  --color-primary: #364156;
-  --color-primary-dark: #11151c;
-  --color-secondary: #212d40;
-  --color-bright: #d66853;
-  --color-light: #e0e1dd;
-  --border-radius: 4px;
-
-  margin: 0;
-  height: 100vh;
-  font-size: 18px;
-}
-
 .container {
   display: flex;
   align-items: center;
