@@ -1,4 +1,4 @@
-.container {
+.form-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@
   background: var(--color-light);
 }
 
-.container,
+.form-container,
 .form_input,
 .form_button {
   font-family: 'Poppins', sans-serif;

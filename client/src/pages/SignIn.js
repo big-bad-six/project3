@@ -57,7 +57,7 @@ export default function SignIn() {
     });
 
     return (
-        <div class="container">
+        <div class="form-container">
             <form class="form" id="login">
                 <h1 class="form_title">Log In</h1>
                 <div class="form_message form_message-error"></div>
