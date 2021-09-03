@@ -19,15 +19,17 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Nav />
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/generate-meme">
-          <MemeGen />
-        </Route>
-        <Route exact path="/sign-in">
-          <SignIn />
-        </Route>
+        <main className="main-container">
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/generate-meme">
+            <MemeGen />
+          </Route>
+          <Route exact path="/sign-in">
+            <SignIn />
+          </Route>
+        </main>
         <Footer />
       </Router>
     </ApolloProvider>
