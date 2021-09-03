@@ -1,6 +1,7 @@
 import './App.css';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import MemeGen from './pages/MemeGen';
 import Nav from './components/Nav';
@@ -19,6 +20,9 @@ function App() {
       <Router>
         <Nav />
         <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/generate-meme">
           <MemeGen />
         </Route>
         <Route exact path="/sign-in">
