@@ -1,20 +1,19 @@
 body {
   background: #212d40;
-  color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
+  color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   --color-primary: #364156;
   --color-primary-dark: #11151c;
   --color-secondary: #212d40;
   --color-bright: #d66853;
   --color-light: #e0e1dd;
-  --color-green: #b7e4c7;
   --border-radius: 4px;
   margin: 0;
   height: 100%;
 }
 
-#root{
+#root {
   height: 100%;
   min-height: 100vh;
   display: grid;
@@ -22,10 +21,23 @@ body {
 }
 
 .card {
-  display: inherit;
-  background-color: rgb(134, 134, 134);
+  background-color: var(--color-light);
   border-radius: 15px;
-  max-width: 300px;
-  padding: 10px;
+  max-width: 800px;
+  padding: 2rem;
+  margin: auto;
+}
+
+.main-container {
+  padding: 2rem;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.main-logo {
+  display: block;
   margin: auto;
 }
