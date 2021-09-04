@@ -1,14 +1,14 @@
 import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/MG_Logo.png';
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          MEME GENERATOR
-        </Link>
+        <img to="/" src={logo} alt='Meme Gen Logo' className="navbar-logo">
+        </img>
         <ul class="main-nav">
           <li>
             <Link to='/sign-in' className='nav-links'>

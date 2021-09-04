@@ -10,28 +10,30 @@
   max-width: 1500px;
   align-items: center;
   flex-direction: row;
-	justify-content: space-between;
+  justify-content: space-between;
 }
 
 .navbar-logo {
-  color: var(--color-primary-dark);
-  margin-left: 20px;
+  margin-left: 30px;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
   display: flex;
   align-items: center;
+  width: 20rem;
 }
 
-.main-nav{
+.main-nav {
   list-style: none;
   display: flex;
 }
 
 .nav-links {
-  color: var(--color-green);
+  color: var(--color-primary-dark);
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+}
+
+.nav-links:hover {
+  color: var(--color-bright);
 }
