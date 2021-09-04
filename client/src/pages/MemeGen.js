@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function MemeGen(){
+export default function MemeGen() {
     return (
         <div className="card">
             <div>
-                <button>Search</button>
+                <input type='text' placeholder='Search Meme...' />
                 <button>Create</button>
             </div>
             <p>Hello World!</p>

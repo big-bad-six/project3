@@ -7,8 +7,10 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <img to="/" src={logo} alt='Meme Gen Logo' className="navbar-logo">
-        </img>
+        <Link to="/">
+          <img src={logo} alt='Meme Gen Logo' className="navbar-logo">
+          </img>
+        </Link>
         <ul class="main-nav">
           <li>
             <Link to='/sign-in' className='nav-links'>
