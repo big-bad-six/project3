@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './MemeGen.css';
 
+// To-do: Moveable text, Download Button saves new image as SVG/PNG
+
+// 
+
 
 export default function MemeGen() {
 
@@ -10,7 +14,7 @@ export default function MemeGen() {
     })
 
     const [randomImg, setRandomImg] = useState(
-        "https://i.imgflip.com/26am.jpg"
+        "https://i.imgflip.com/2fm6x.jpg"
     )
 
     const [allMemeImgs, setAllMemeImgs] = useState([])
@@ -42,18 +46,19 @@ export default function MemeGen() {
                 <input
                     type="text"
                     name="topText"
-                    placeholder="Add Top Text"
+                    placeholder="Top Text Here"
                     value={inputText.topText}
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     name="bottomText"
-                    placeholder="Add Bottom Text Here"
+                    placeholder="Bottom Text Here"
                     value={inputText.bottomText}
                     onChange={handleChange}
                 />
                 <button>Generate</button>
+                <button>Download</button>
             </form>
             <div className="meme">
                 <img src={randomImg} alt="Generated meme" />
