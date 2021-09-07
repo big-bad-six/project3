@@ -11,7 +11,7 @@ function Navbar() {
           <img src={logo} alt='Meme Gen Logo' className="navbar-logo">
           </img>
         </Link>
-        <ul class="main-nav">
+        <ul className="main-nav">
           <li>
             <Link to='/sign-in' className='nav-links'>
               Log In/Sign Up

@@ -57,45 +57,45 @@ export default function SignIn() {
     });
 
     return (
-        <div class="form-container">
-            <form class="form" id="login">
-                <h1 class="form_title">Log In</h1>
-                <div class="form_message form_message-error"></div>
-                <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Username or email" />
-                    <div class="form_input-error-message"></div>
+        <div className="form-container">
+            <form className="form" id="login">
+                <h1 className="form_title">Log In</h1>
+                <div className="form_message form_message-error"></div>
+                <div className="form_input-group">
+                    <input type="text" className="form_input" autofocus placeholder="Username or email" />
+                    <div className="form_input-error-message"></div>
                 </div>
-                <div class="form_input-group">
-                    <input type="password" class="form_input" autofocus placeholder="Password" />
-                    <div class="form_input-error-message"></div>
+                <div className="form_input-group">
+                    <input type="password" className="form_input" autofocus placeholder="Password" />
+                    <div className="form_input-error-message"></div>
                 </div>
-                <button class="form_button" type="submit">Continue</button>
-                <p class="form_text">
-                    <a class="form_link" href="./" id="linkCreateAccount">Don't have an account? Sign Up</a>
+                <button className="form_button" type="submit">Continue</button>
+                <p className="form_text">
+                    <a className="form_link" href="./" id="linkCreateAccount">Don't have an account? Sign Up</a>
                 </p>
             </form>
-            <form class="form form-hidden" id="createAccount">
-                <h1 class="form_title">Sign Up</h1>
-                <div class="form_message form_message-error"></div>
-                <div class="form_input-group">
-                    <input type="text" id="signupUsername" class="form_input" autofocus placeholder="Username" />
-                    <div class="form_input-error-message"></div>
+            <form className="form form-hidden" id="createAccount">
+                <h1 className="form_title">Sign Up</h1>
+                <div className="form_message form_message-error"></div>
+                <div className="form_input-group">
+                    <input type="text" id="signupUsername" className="form_input" autofocus placeholder="Username" />
+                    <div className="form_input-error-message"></div>
                 </div>
-                <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Email Address" />
-                    <div class="form_input-error-message"></div>
+                <div className="form_input-group">
+                    <input type="text" className="form_input" autofocus placeholder="Email Address" />
+                    <div className="form_input-error-message"></div>
                 </div>
-                <div class="form_input-group">
-                    <input type="password" class="form_input" autofocus placeholder="Password" />
-                    <div class="form_input-error-message"></div>
+                <div className="form_input-group">
+                    <input type="password" className="form_input" autofocus placeholder="Password" />
+                    <div className="form_input-error-message"></div>
                 </div>
-                <div class="form_input-group">
-                    <input type="password" class="form_input" autofocus placeholder="Confirm password" />
-                    <div class="form_input-error-message"></div>
+                <div className="form_input-group">
+                    <input type="password" className="form_input" autofocus placeholder="Confirm password" />
+                    <div className="form_input-error-message"></div>
                 </div>
-                <button class="form_button" type="submit">Continue</button>
-                <p class="form_text">
-                    <a class="form_link" href="./" id="linkLogin">Already have an account? Log In</a>
+                <button className="form_button" type="submit">Continue</button>
+                <p className="form_text">
+                    <a className="form_link" href="./" id="linkLogin">Already have an account? Log In</a>
                 </p>
             </form>
         </div>
