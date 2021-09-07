@@ -1,0 +1,80 @@
+.meme-container {
+    display: flex;
+  }
+
+  form {
+    background: #c74e36;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  input,
+  button {
+    width: 50%;
+    height: 40px;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+  }
+
+  input {
+    padding: 6px 8px;
+  }
+
+  button {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #212d40;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 20px;
+  }
+
+  .meme {
+    position: relative;
+  }
+  .meme > img {
+    width: 100%;
+    background: cover;
+    margin-bottom: -5px;
+    background-repeat: no-repeat;
+  }
+
+  .meme h2 {
+    position: absolute;
+    max-width: 36em;
+    font-size: 40px;
+    text-align: center;
+    left: 49%;
+    transform: translateX(-50%);
+    margin: 0.3em 0;
+    font-family: Impact, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 #000;
+  }
+
+  .meme .top {
+    top: 0.1em;
+  }
+  .meme .bottom {
+    bottom: 0.1em;
+  }
+  
+  /* On screens that are 768px or less */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+    .meme-container {
+      flex-direction: column;
+    }
+    .meme > h2 {
+      font-size: 30px;
+    }
+  }
+  
