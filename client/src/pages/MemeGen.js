@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './MemeGen.css';
+
 
 export default function MemeGen() {
 
@@ -22,8 +24,17 @@ export default function MemeGen() {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log("submitted")
-    }
+        const randNum = Math.floor(Math.random() * allMemeImgs.length)
+        const randMemeImgUrl = allMemeImgs[randNum].url
+        setRandomImg(randMemeImgUrl)
+      }
+
+    useEffect(() => {
+        console.log("test run")
+        fetch("https://api.imgflip.com/get_memes")
+          .then(response => response.json())
+          .then(response => setAllMemeImgs(response.data.memes))
+      }, [])
 
     return (
         <div className="card">
@@ -39,7 +50,7 @@ export default function MemeGen() {
                     type="text"
                     name="bottomText"
                     placeholder="Add Bottom Text Here"
-                    value={inputText.topText}
+                    value={inputText.bottomText}
                     onChange={handleChange}
                 />
                 <button>Generate</button>
