@@ -1,7 +1,11 @@
 import React from 'react';
+import { useQuery, useMutation } from '@apollo/client';
 import '.././assets/css/Form.css';
+import { SIGN_UP } from '../utils/mutations';
 
 export default function SignIn() {
+
+    const [addUser, { error }] = useMutation(SIGN_UP);
 
     function setFormMessage(formElement, type, message) {
         const messageElement = formElement.querySelector(".form_message");
@@ -39,7 +43,11 @@ export default function SignIn() {
 
         loginForm.addEventListener("submit", e => {
             e.preventDefault();
-
+            // set up a state in this function for a profile
+            // hook called { setProfile }
+            //import useState to set this function up
+            // const [profile, setProfile] = useState ({})
+            console.log(e.target);
             setFormMessage(loginForm, "error", "Invalid username/password combination");
         });
 

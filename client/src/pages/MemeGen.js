@@ -40,8 +40,7 @@ export default function MemeGen() {
 
 
     useEffect(() => {
-        console.log("test run")
-        fetch("https://api.imgflip.com/get_memes")
+         fetch("https://api.imgflip.com/get_memes")
           .then(response => response.json())
           .then(response => setAllMemeImgs(response.data.memes))
       }, [])

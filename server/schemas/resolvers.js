@@ -43,6 +43,8 @@ const resolvers = {
       return { token, profile };
     },
 
+    
+
     addSkill: async (parent, { profileId, skill }) => {
       return Profile.findOneAndUpdate(
         { _id: profileId },
