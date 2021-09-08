@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './MemeGen.css';
+import '../assets/css/MemeGen.css';
 
 // To-do: Moveable text, Download Button saves new image as SVG/PNG
-
-// 
-
 
 export default function MemeGen() {
 
@@ -32,6 +29,7 @@ export default function MemeGen() {
         const randMemeImgUrl = allMemeImgs[randNum].url
         setRandomImg(randMemeImgUrl)
       }
+
 
     useEffect(() => {
         console.log("test run")
@@ -67,4 +65,5 @@ export default function MemeGen() {
             </div>
         </div>
     );
+
 }
