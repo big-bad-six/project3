@@ -1,111 +1,89 @@
-import React from 'react';
-import { useQuery, useMutation } from '@apollo/client';
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom'
 import '.././assets/css/Form.css';
 import { SIGN_UP } from '../utils/mutations';
+// import Auth from '../utils/auth';
 
-export default function SignIn() {
 
-    const [addUser, { error }] = useMutation(SIGN_UP);
+export default function SignIn(props) {
+    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [addUser] = useMutation(SIGN_UP);
 
-    function setFormMessage(formElement, type, message) {
-        const messageElement = formElement.querySelector(".form_message");
-
-        messageElement.textContent = message;
-        messageElement.classList.remove("form_message-success", "form_message-error");
-        messageElement.classList.add(`form_message-${type}`);
-    }
-
-    function setInputError(inputElement, message) {
-        inputElement.classList.add("form_input-error");
-        inputElement.parentElement.querySelector(".form_input-error-message").textContent = message;
-    }
-
-    function clearInputError(inputElement) {
-        inputElement.classList.remove("form_input-error");
-        inputElement.parentElement.querySelector(".form_input-error-message").textContent = "";
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const loginForm = document.querySelector("#login");
-        const createAccountForm = document.querySelector("#createAccount");
-
-        document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-            e.preventDefault();
-            loginForm.classList.add("form-hidden");
-            createAccountForm.classList.remove("form-hidden");
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        // this is greyed out because it is used in line 24 cost token
+        // we need to create an Auth in utils
+        const mutationResponse = await addUser({
+          variables: {
+            email: formState.email,
+            password: formState.password,
+            firstName: formState.firstName,
+            lastName: formState.lastName,
+          },
         });
-
-        document.querySelector("#linkLogin").addEventListener("click", e => {
-            e.preventDefault();
-            loginForm.classList.remove("form-hidden");
-            createAccountForm.classList.add("form-hidden");
+        //const token = mutationResponse.data.addUser.token;
+       // Auth.login(token);
+      };
+    
+      const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+          ...formState,
+          [name]: value,
         });
-
-        loginForm.addEventListener("submit", e => {
-            e.preventDefault();
-            // set up a state in this function for a profile
-            // hook called { setProfile }
-            //import useState to set this function up
-            // const [profile, setProfile] = useState ({})
-            console.log(e.target);
-            setFormMessage(loginForm, "error", "Invalid username/password combination");
-        });
-
-        document.querySelectorAll(".form_input").forEach(inputElement => {
-            inputElement.addEventListener("blur", e => {
-                if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 6) {
-                    setInputError(inputElement, "Username must be at least 6 characters in length");
-                }
-            });
-
-            inputElement.addEventListener("input", e => {
-                clearInputError(inputElement);
-            });
-        });
-    });
-
-    return (
-        <div className="form-container">
-            <form className="form" id="login">
-                <h1 className="form_title">Log In</h1>
-                <div className="form_message form_message-error"></div>
-                <div className="form_input-group">
-                    <input type="text" className="form_input" autoFocus placeholder="Username or email" />
-                    <div className="form_input-error-message"></div>
-                </div>
-                <div className="form_input-group">
-                    <input type="password" className="form_input" autoFocus placeholder="Password" />
-                    <div className="form_input-error-message"></div>
-                </div>
-                <button className="form_button" type="submit">Continue</button>
-                <p className="form_text">
-                    <a className="form_link" href="./" id="linkCreateAccount">Don't have an account? Sign Up</a>
-                </p>
-            </form>
-            <form className="form form-hidden" id="createAccount">
-                <h1 className="form_title">Sign Up</h1>
-                <div className="form_message form_message-error"></div>
-                <div className="form_input-group">
-                    <input type="text" id="signupUsername" className="form_input" autoFocus placeholder="Username" />
-                    <div className="form_input-error-message"></div>
-                </div>
-                <div className="form_input-group">
-                    <input type="text" className="form_input" autoFocus placeholder="Email Address" />
-                    <div className="form_input-error-message"></div>
-                </div>
-                <div className="form_input-group">
-                    <input type="password" className="form_input" autoFocus placeholder="Password" />
-                    <div className="form_input-error-message"></div>
-                </div>
-                <div className="form_input-group">
-                    <input type="password" className="form_input" autoFocus placeholder="Confirm password" />
-                    <div className="form_input-error-message"></div>
-                </div>
-                <button className="form_button" type="submit">Continue</button>
-                <p className="form_text">
-                    <a className="form_link" href="./" id="linkLogin">Already have an account? Log In</a>
-                </p>
-            </form>
+      };
+    
+      return (
+        <div className="container my-1">
+          <Link to="/log-in">← Go to Login</Link>
+    
+          <h2>Signup</h2>
+          <form onSubmit={handleFormSubmit}>
+            <div className="flex-row space-between my-2">
+              <label htmlFor="firstName">First Name:</label>
+              <input
+                placeholder="First"
+                name="firstName"
+                type="firstName"
+                id="firstName"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex-row space-between my-2">
+              <label htmlFor="lastName">Last Name:</label>
+              <input
+                placeholder="Last"
+                name="lastName"
+                type="lastName"
+                id="lastName"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex-row space-between my-2">
+              <label htmlFor="email">Email:</label>
+              <input
+                placeholder="youremail@test.com"
+                name="email"
+                type="email"
+                id="email"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex-row space-between my-2">
+              <label htmlFor="pwd">Password:</label>
+              <input
+                placeholder="******"
+                name="password"
+                type="password"
+                id="pwd"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex-row flex-end">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
         </div>
-    );
+      );
 }
