@@ -63,7 +63,7 @@ export default function MemeGen() {
                     value={inputText.bottomText}
                     onChange={handleChange}
                 />
-                <button>Generate</button>
+                <button>Next Image</button>
                 <button onClick={handleClick}>Download</button>
             </form>
 
