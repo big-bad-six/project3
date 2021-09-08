@@ -39,23 +39,27 @@
   .meme > img {
     display: flex;
     margin: auto;
-    max-width: 40%;
+    width: 50%;
   }
 
   .meme h2 {
     position: absolute;
-    max-width: 36em;
-    font-size: 40px;
+    width: 80%;
     text-align: center;
-    left: 49%;
+    left: 50%;
     transform: translateX(-50%);
-    margin: 0.3em 0;
-    font-family: Impact, sans-serif;
-    font-size: 3em;
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 1.25em;
     text-transform: uppercase;
     color: white;
     letter-spacing: 1px;
-    text-shadow: 4px 3px 0 #000;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+    -webkit-text-stroke: 1px black;
+
   }
 
   .meme .top {
