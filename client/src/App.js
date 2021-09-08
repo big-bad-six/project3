@@ -3,6 +3,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
+import LogIn from './pages/LogIn';
 import MemeGen from './pages/MemeGen';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route exact path="/sign-in">
             <SignIn />
+          </Route>
+          <Route exact path="/log-in">
+            <LogIn />
           </Route>
         </main>
         <Footer />
