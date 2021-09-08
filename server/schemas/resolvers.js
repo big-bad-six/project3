@@ -1,6 +1,7 @@
 // BAD
 // models> index, models> profile
 // schemas> resolvers, schemas> typeDefs will all have to be changed
+const { AuthenticationError } = require('apollo-server-express');
 const { Profile, MemeImage } = require('../models');
 
 const resolvers = {
@@ -19,9 +20,29 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name }) => {
-      return Profile.create({ name });
+    addProfile: async (parent, { name, email, password }) => {
+      const profile = await Profile.create({ name, email, password });
+      const token = signToken(profile);
+
+      return { token, profile };
     },
+    login: async (parent, { email, password }) => {
+      const profile = await Profile.findOne({ email });
+
+      if (!profile) {
+        throw new AuthenticationError('No profile with this email found!');
+      }
+
+      const correctPw = await profile.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect password!');
+      }
+
+      const token = signToken(profile);
+      return { token, profile };
+    },
+
     addSkill: async (parent, { profileId, skill }) => {
       return Profile.findOneAndUpdate(
         { _id: profileId },

@@ -62,11 +62,11 @@ export default function SignIn() {
                 <h1 className="form_title">Log In</h1>
                 <div className="form_message form_message-error"></div>
                 <div className="form_input-group">
-                    <input type="text" className="form_input" autofocus placeholder="Username or email" />
+                    <input type="text" className="form_input" autoFocus placeholder="Username or email" />
                     <div className="form_input-error-message"></div>
                 </div>
                 <div className="form_input-group">
-                    <input type="password" className="form_input" autofocus placeholder="Password" />
+                    <input type="password" className="form_input" autoFocus placeholder="Password" />
                     <div className="form_input-error-message"></div>
                 </div>
                 <button className="form_button" type="submit">Continue</button>
@@ -78,19 +78,19 @@ export default function SignIn() {
                 <h1 className="form_title">Sign Up</h1>
                 <div className="form_message form_message-error"></div>
                 <div className="form_input-group">
-                    <input type="text" id="signupUsername" className="form_input" autofocus placeholder="Username" />
+                    <input type="text" id="signupUsername" className="form_input" autoFocus placeholder="Username" />
                     <div className="form_input-error-message"></div>
                 </div>
                 <div className="form_input-group">
-                    <input type="text" className="form_input" autofocus placeholder="Email Address" />
+                    <input type="text" className="form_input" autoFocus placeholder="Email Address" />
                     <div className="form_input-error-message"></div>
                 </div>
                 <div className="form_input-group">
-                    <input type="password" className="form_input" autofocus placeholder="Password" />
+                    <input type="password" className="form_input" autoFocus placeholder="Password" />
                     <div className="form_input-error-message"></div>
                 </div>
                 <div className="form_input-group">
-                    <input type="password" className="form_input" autofocus placeholder="Confirm password" />
+                    <input type="password" className="form_input" autoFocus placeholder="Confirm password" />
                     <div className="form_input-error-message"></div>
                 </div>
                 <button className="form_button" type="submit">Continue</button>
