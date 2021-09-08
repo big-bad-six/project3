@@ -37,10 +37,9 @@
     position: relative;
   }
   .meme > img {
-    width: 100%;
-    background: center;
-    margin-bottom: -5px;
-    background-repeat: no-repeat;
+    display: flex;
+    margin: auto;
+    max-width: 40%;
   }
 
   .meme h2 {

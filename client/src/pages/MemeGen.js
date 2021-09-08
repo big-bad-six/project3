@@ -6,12 +6,13 @@ import '../assets/css/MemeGen.css';
 
 export default function MemeGen() {
     /* from svg to button tutorial */
-    
-     const handleClick = e => {
-         alert("Under construction! Take a screenshot")
-      };
 
-      /* end of tutorial */
+    const handleClick = e => {
+        e.preventDefault();
+        alert("Under construction! How about a screenshot?")
+    };
+
+    /* end of tutorial */
 
     const [inputText, setInputText] = useState({
         topText: "",
@@ -36,14 +37,14 @@ export default function MemeGen() {
         const randNum = Math.floor(Math.random() * allMemeImgs.length)
         const randMemeImgUrl = allMemeImgs[randNum].url
         setRandomImg(randMemeImgUrl)
-      }
+    }
 
 
     useEffect(() => {
-         fetch("https://api.imgflip.com/get_memes")
-          .then(response => response.json())
-          .then(response => setAllMemeImgs(response.data.memes))
-      }, [])
+        fetch("https://api.imgflip.com/get_memes")
+            .then(response => response.json())
+            .then(response => setAllMemeImgs(response.data.memes))
+    }, [])
 
     return (
         <div className="card">
@@ -63,9 +64,9 @@ export default function MemeGen() {
                     onChange={handleChange}
                 />
                 <button>Generate</button>
-                <button>Download</button>
+                <button onClick={handleClick}>Download</button>
             </form>
-            <button onClick={handleClick}>Download</button>
+
             <div className="meme">
                 <img src={randomImg} alt="Generated meme" />
                 <h2 className="top">{inputText.topText}</h2>
