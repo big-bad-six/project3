@@ -15,6 +15,22 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+//Auth from stripe
+
+// const httpLink = createHttpLink({
+//   uri: '/graphql',
+// });
+
+// const authLink = setContext((_, { headers }) => {
+//   const token = localStorage.getItem('id_token');
+//   return {
+//     headers: {
+//       ...headers,
+//       authorization: token ? `Bearer ${token}` : '',
+//     },
+//   };
+// });
+
 function App() {
   return (
     <ApolloProvider client={client}>
