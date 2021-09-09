@@ -9,7 +9,7 @@ export default function MemeGen() {
 
     const handleClick = e => {
         e.preventDefault();
-        alert("Under construction! How about a screenshot?")
+        alert("🏗️ Under construction! How about a screenshot? 🤳")
     };
 
     /* end of tutorial */
