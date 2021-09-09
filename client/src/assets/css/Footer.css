@@ -9,3 +9,9 @@ footer {
   z-index: 999;
   color: var(--color-primary-dark);
 }
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 0.8rem;
+  }
+}

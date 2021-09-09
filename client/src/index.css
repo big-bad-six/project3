@@ -32,7 +32,14 @@ body {
   padding: 2rem;
 }
 
-h1 {
+h1,
+p {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: var(--color-bright);
   display: flex;
   justify-content: center;
 }
@@ -40,4 +47,10 @@ h1 {
 .main-logo {
   display: block;
   margin: auto;
+}
+
+.home-button {
+  display: block;
+  margin: auto;
+  text-decoration: none;
 }

@@ -37,3 +37,13 @@
 .nav-links:hover {
   color: var(--color-bright);
 }
+
+@media screen and (max-width: 768px) {
+  .navbar-logo {
+    width: 15rem;
+  }
+  .nav-links {
+    display: table-caption;
+    font-size: 1rem;
+  }
+}

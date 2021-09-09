@@ -2,15 +2,20 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type Profile {
-    _id: ID
+    _id: ID!
     name: String
-    skills: [String]!
+    email: String
   }
 
   type MemeImage {
     _id: ID
     desc: String
     url: String!
+  }
+
+  type Auth {
+    token: ID!
+    profile: Profile
   }
 
   type Query {
@@ -20,11 +25,11 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addProfile(name: String!): Profile
+    addProfile(name: String!): Auth
     addSkill(profileId: ID!, skill: String!): Profile
     removeProfile(profileId: ID!): Profile
     removeSkill(profileId: ID!, skill: String!): Profile
-    login(email: String!, password: String!): Profile
+    login(email: String!, password: String!): Auth
   }
 `;
 
