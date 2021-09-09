@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 import { Form, Button, Alert } from 'react-bootstrap';
 
 
-export default function SignIn(props) {
+export default function SignUp(props) {
     const [userFormData, setUserFormData] = useState({ email: '', password: '', firstName: '', lastName: '' });
     const [validated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);

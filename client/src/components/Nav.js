@@ -13,8 +13,8 @@ function Navbar() {
         </Link>
         <ul className="main-nav">
           <li>
-            <Link to='/sign-in' className='nav-links'>
-              Sign In
+            <Link to='/sign-up' className='nav-links'>
+              Sign Up
             </Link>
           </li>
           <li>
