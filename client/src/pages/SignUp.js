@@ -74,7 +74,7 @@ export default function SignUp(props) {
     return (
         <div className="form">
 
-            <h2>Sign In</h2>
+            {/* <h2>Sign Up</h2>
             <form noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <div className="field">
                     <label htmlFor="firstName">First Name:</label>
@@ -131,7 +131,7 @@ export default function SignUp(props) {
                         variant="success"
                     >Submit</button>
                 </div>
-            </form>
+            </form> */}
 
             {/* This is needed for the validation functionality above */}
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
