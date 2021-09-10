@@ -19,7 +19,7 @@ export default function LogIn(props) {
         variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
-        Auth.login(token);
+      Auth.login(token);
     } catch (e) {
       console.log(e);
     }
@@ -34,40 +34,40 @@ export default function LogIn(props) {
   };
 
   return (
-    <div className="form">
+    <div className="card">
+      <div className="form">
 
-      <h2>Log In</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="field">
-          <label htmlFor="email">Email address:</label>
-          <input
-            className="form-input"
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="field">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+        <h2>Log In</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="field">
+            <input
+              className="form-input"
+              placeholder="youremail@test.com"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+            />
           </div>
-        ) : null}
-        <div className="button">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+          <div className="field">
+            <input
+              placeholder="******"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+            />
+          </div>
+          {error ? (
+            <div>
+              <p className="error-text">The provided credentials are incorrect</p>
+            </div>
+          ) : null}
+          <div className="button">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
