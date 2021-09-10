@@ -13,7 +13,7 @@ T1 -- Contributors
     Brandon Alexander
     Rondolph Dixon
     Uriel Nunez
-    Alap Patel
+    Alap Raval
 
 T2 -- Acknowledgements
 
