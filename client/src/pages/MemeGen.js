@@ -79,8 +79,8 @@ export default function MemeGen() {
                 />
                 <button>Next Image</button>
                 <button onClick={handleClick}>Download</button>
-                <br />
-                Click and drag text for more options 🏗️
+
+                <p>Click and drag text for more options 🏗️</p>
             </form>
 
             <div className="meme">
@@ -89,7 +89,6 @@ export default function MemeGen() {
                 <Draggable><h2 className="mid">{inputText.midText}</h2></Draggable>
                 <Draggable><h2 className="bottom">{inputText.bottomText}</h2></Draggable>
             </div>
-            <br />
 
             <div className="gallery">
                 <h1 className="galleryTitle">The Mini Mothership Meme Museum </h1>
