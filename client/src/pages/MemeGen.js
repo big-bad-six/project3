@@ -91,7 +91,7 @@ export default function MemeGen() {
             </div>
             <br />
 
-            <div className="card">
+            <div className="gallery">
                 <h1 className="galleryTitle">The Mini Mothership Meme Museum </h1>
                 <div className="galleryImgs">
                     <img src={comments} alt="add comments meme" />
