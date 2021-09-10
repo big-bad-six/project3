@@ -55,43 +55,45 @@ export default function MemeGen() {
 
     return (
         <div className="card">
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="topText"
-                    placeholder="Top Text Here"
-                    value={inputText.topText}
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    name="midText"
-                    placeholder="Middle Text Here"
-                    value={inputText.midText}
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    name="bottomText"
-                    placeholder="Bottom Text Here"
-                    value={inputText.bottomText}
-                    onChange={handleChange}
-                />
-                <button>Next Image</button>
-                <button onClick={handleClick}>Download</button>
+            <div className="meme-container">
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="topText"
+                        placeholder="Top Text Here"
+                        value={inputText.topText}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="text"
+                        name="midText"
+                        placeholder="Middle Text Here"
+                        value={inputText.midText}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="text"
+                        name="bottomText"
+                        placeholder="Bottom Text Here"
+                        value={inputText.bottomText}
+                        onChange={handleChange}
+                    />
+                    <button>Next Image</button>
+                    <button onClick={handleClick}>Download</button>
 
-                <p>Click and drag text for more options 🏗️</p>
-            </form>
+                    <p>Click and drag text for more options 🏗️</p>
+                </form>
 
-            <div className="meme">
-                <img src={randomImg} alt="Generated meme" />
-                <Draggable><h2 className="top">{inputText.topText}</h2></Draggable>
-                <Draggable><h2 className="mid">{inputText.midText}</h2></Draggable>
-                <Draggable><h2 className="bottom">{inputText.bottomText}</h2></Draggable>
+                <div className="meme">
+                    <img src={randomImg} alt="Generated meme" />
+                    <Draggable><h2 className="top">{inputText.topText}</h2></Draggable>
+                    <Draggable><h2 className="mid">{inputText.midText}</h2></Draggable>
+                    <Draggable><h2 className="bottom">{inputText.bottomText}</h2></Draggable>
+                </div>
             </div>
 
             <div className="gallery">
-                <h1 className="galleryTitle">The Mini Mothership Meme Museum </h1>
+                <div className="galleryTitle">The Mini Mothership Meme Museum </div>
                 <div className="galleryImgs">
                     <img src={comments} alt="add comments meme" />
                     <img src={sharescreen} alt="bernie sanders i am once again asking you to share your screen meme" />
