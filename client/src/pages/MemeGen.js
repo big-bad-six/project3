@@ -22,6 +22,7 @@ export default function MemeGen() {
 
     const [inputText, setInputText] = useState({
         topText: "",
+        midText: "",
         bottomText: "",
     })
 
@@ -64,6 +65,13 @@ export default function MemeGen() {
                 />
                 <input
                     type="text"
+                    name="midText"
+                    placeholder="Middle Text Here"
+                    value={inputText.midText}
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
                     name="bottomText"
                     placeholder="Bottom Text Here"
                     value={inputText.bottomText}
@@ -71,18 +79,20 @@ export default function MemeGen() {
                 />
                 <button>Next Image</button>
                 <button onClick={handleClick}>Download</button>
+                <br />
+                Click and drag text for more options 🏗️
             </form>
 
             <div className="meme">
                 <img src={randomImg} alt="Generated meme" />
                 <Draggable><h2 className="top">{inputText.topText}</h2></Draggable>
+                <Draggable><h2 className="mid">{inputText.midText}</h2></Draggable>
                 <Draggable><h2 className="bottom">{inputText.bottomText}</h2></Draggable>
             </div>
             <br />
-            <br />
-            <br />
+
             <div className="card">
-                <h1> Scroll Down for More Memes </h1>
+                <h1>The Mini Mothership Meme Museum </h1>
                 <img src={comments} alt="add comments meme" />
                 <img src={sharescreen} alt="bernie sanders i am once again asking you to share your screen meme" />
                 <img src={touchdown} alt="burning house girl we've got a touch meme" />
