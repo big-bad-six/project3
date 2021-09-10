@@ -19,7 +19,6 @@ img {
 }
 
 form {
-  background: var(--color-light);
   text-align: center;
   padding: 20px;
 }
@@ -36,6 +35,7 @@ button {
 
 input {
   padding: 6px 8px;
+  
 }
 
 button {
