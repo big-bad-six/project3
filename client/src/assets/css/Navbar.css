@@ -39,6 +39,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
   .navbar-logo {
     width: 15rem;
   }

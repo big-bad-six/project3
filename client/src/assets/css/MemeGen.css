@@ -113,4 +113,14 @@ button:hover {
   .meme .mid {
     top: 2.5em;
 }
+
+.galleryTitle {
+  padding: 1em 0 0.5em;
+  font-size: 1.25em;
+}
+
+.galleryImgs img {
+  max-width:100%;
+  margin: 0.5em 0;
+}
 }
