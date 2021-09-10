@@ -47,10 +47,13 @@ h2 {
 .main-logo {
   display: block;
   margin: auto;
+  width: 100%;
+  max-width: 298px;
 }
 
 .home-button {
   display: block;
   margin: auto;
   text-decoration: none;
+  padding: 10px 0 0;
 }

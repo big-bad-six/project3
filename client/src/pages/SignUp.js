@@ -31,10 +31,6 @@ export default function SignUp(props) {
         // this is greyed out because it is used in line 24 cost token
         // we need to create an Auth in utils
         const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
         try {
             const { data } = await addUser({
                 variables: { ...userFormData },
@@ -76,7 +72,7 @@ export default function SignUp(props) {
             <div className="form">
 
                 <h2>Sign Up</h2>
-                <form noValidate validated={validated} onSubmit={handleFormSubmit}>
+                <form noValidate onSubmit={handleFormSubmit}>
                     <div className="field">
                         <input
                             placeholder="First"
@@ -117,17 +113,16 @@ export default function SignUp(props) {
                             value={userFormData.password}
                         />
                     </div>
-                    <div className="button">
-                        <button type="submit" disabled={
-                            !(
-                                userFormData.username &&
-                                userFormData.email &&
-                                userFormData.password
-                            )
-                        }
-                            variant="success"
-                        >Submit</button>
-                    </div>
+                    <button type="submit" disabled={
+                        !(
+                            userFormData.firstName &&
+                            userFormData.lastName &&
+                            userFormData.email &&
+                            userFormData.password
+                        )
+                    }
+                        variant="success"
+                    >Submit</button>
                 </form>
             </div>
         </div>

@@ -63,9 +63,7 @@ export default function LogIn(props) {
               <p className="error-text">The provided credentials are incorrect</p>
             </div>
           ) : null}
-          <div className="button">
-            <button type="submit">Submit</button>
-          </div>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
