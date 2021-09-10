@@ -49,12 +49,8 @@ button:hover {
 
 .meme h2 {
   position: absolute;
-  width: 80%;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 15px 0;
-  padding: 0 5px;
+  left: 0;
+  right: 0;
   font-family: impact, sans-serif;
   font-size: 1.25em;
   text-transform: uppercase;

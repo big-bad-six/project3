@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/css/MemeGen.css';
+import Draggable from 'react-draggable';
 
 
 // To-do: Moveable text, Download Button saves new image as SVG/PNG
@@ -69,8 +70,8 @@ export default function MemeGen() {
 
             <div className="meme">
                 <img src={randomImg} alt="Generated meme" />
-                <h2 className="top">{inputText.topText}</h2>
-                <h2 className="bottom">{inputText.bottomText}</h2>
+                <Draggable><h2 className="top">{inputText.topText}</h2></Draggable>
+                <Draggable><h2 className="bottom">{inputText.bottomText}</h2></Draggable>
             </div>
         </div>
     );
