@@ -2,9 +2,15 @@
   display: flex;
 }
 
-.gallery {
+.galleryTitle {
   padding: 1em;
   text-align: center; 
+}
+
+.galleryImgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form {
@@ -91,7 +97,9 @@ button:hover {
     max-width: none;
   }
 
-
+  .galleryImgs {
+    width: auto;
+  }
 
   form {
     margin: 0;
