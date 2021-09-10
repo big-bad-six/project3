@@ -92,13 +92,14 @@ export default function MemeGen() {
             <br />
 
             <div className="card">
-                <h1 className="gallery">The Mini Mothership Meme Museum </h1>
-                <img src={comments} alt="add comments meme" />
-                <img src={sharescreen} alt="bernie sanders i am once again asking you to share your screen meme" />
-                <img src={touchdown} alt="burning house girl we've got a touchdown meme" />
-                <img src={whosdog} alt="whos dog doge meme" />
-                <img src={legocat} alt="i should buy legos cat meme" />
-
+                <h1 className="galleryTitle">The Mini Mothership Meme Museum </h1>
+                <div className="galleryImgs">
+                    <img src={comments} alt="add comments meme" />
+                    <img src={sharescreen} alt="bernie sanders i am once again asking you to share your screen meme" />
+                    <img src={touchdown} alt="burning house girl we've got a touchdown meme" />
+                    <img src={whosdog} alt="whos dog doge meme" />
+                    <img src={legocat} alt="i should buy legos cat meme" />
+                </div>
             </div>
         </div>
     );
