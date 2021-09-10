@@ -92,7 +92,7 @@ export default function MemeGen() {
             <br />
 
             <div className="card">
-                <h1>The Mini Mothership Meme Museum </h1>
+                <h1 className="gallery">The Mini Mothership Meme Museum </h1>
                 <img src={comments} alt="add comments meme" />
                 <img src={sharescreen} alt="bernie sanders i am once again asking you to share your screen meme" />
                 <img src={touchdown} alt="burning house girl we've got a touchdown meme" />
