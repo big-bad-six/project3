@@ -6,7 +6,8 @@ import sharescreen from '../assets/images/shareyourscreen.jpg';
 import touchdown from '../assets/images/touchdown.jpg';
 import whosdog from '../assets/images/whosdog.jpg';
 import legocat from '../assets/images/legoscat.jpg';
-
+import domtoimage from 'dom-to-image';
+import { saveAs } from 'file-saver';
 
 // To-do: Moveable text, Download Button saves new image as SVG/PNG
 
@@ -15,7 +16,11 @@ export default function MemeGen() {
 
     const handleClick = e => {
         e.preventDefault();
-        alert("🏗️ Under construction! How about a screenshot? 🤳")
+        let memeEl = document.querySelector('.meme');
+        domtoimage.toBlob(memeEl)
+            .then(function (blob) {
+                saveAs(blob, 'meme.png');
+            });
     };
 
     /* end of tutorial */
