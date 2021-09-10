@@ -9,7 +9,7 @@ export default function MemeGen() {
 
     const handleClick = e => {
         e.preventDefault();
-        alert("Under construction! How about a screenshot?")
+        alert("🏗️ Under construction! How about a screenshot? 🤳")
     };
 
     /* end of tutorial */
@@ -20,7 +20,7 @@ export default function MemeGen() {
     })
 
     const [randomImg, setRandomImg] = useState(
-        "https://i.imgflip.com/2fm6x.jpg"
+        "https://i.imgflip.com/tau4.jpg"
     )
 
     const [allMemeImgs, setAllMemeImgs] = useState([])

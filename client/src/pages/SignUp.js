@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import '.././assets/css/Form.css';
 import { SIGN_UP } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { Form, Button, Alert } from 'react-bootstrap';
 
 
-export default function SignIn(props) {
+export default function SignUp(props) {
     const [userFormData, setUserFormData] = useState({ email: '', password: '', firstName: '', lastName: '' });
     const [validated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
@@ -74,7 +74,7 @@ export default function SignIn(props) {
     return (
         <div className="form">
 
-            <h2>Sign In</h2>
+            {/* <h2>Sign Up</h2>
             <form noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <div className="field">
                     <label htmlFor="firstName">First Name:</label>
@@ -131,7 +131,7 @@ export default function SignIn(props) {
                         variant="success"
                     >Submit</button>
                 </div>
-            </form>
+            </form> */}
 
             {/* This is needed for the validation functionality above */}
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
