@@ -2,6 +2,11 @@
   display: flex;
 }
 
+.gallery {
+  padding: 1em;
+  text-align: center; 
+}
+
 form {
   background: var(--color-light);
   text-align: center;
@@ -77,6 +82,20 @@ button:hover {
   h1 {
     font-size: 30px;
     margin-bottom: 14px;
+  }
+
+  .card {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+  }
+
+
+
+  form {
+    margin: 0;
+    padding: 0;
   }
   .meme-container {
     flex-direction: column;
