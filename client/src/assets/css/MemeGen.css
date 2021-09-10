@@ -7,6 +7,11 @@
   text-align: center; 
 }
 
+img {
+  max-width:100%;
+  padding: 5px;
+}
+
 .galleryImgs {
   display: flex;
   flex-direction: column;
@@ -55,7 +60,7 @@ button:hover {
 .meme > img {
   display: flex;
   margin: auto;
-  width: 50%;
+  width: 100%;
 }
 
 .meme h2 {
@@ -88,17 +93,13 @@ button:hover {
   h1 {
     font-size: 30px;
     margin-bottom: 14px;
-  }
+  } */
 
   .card {
     margin: 0;
     padding-left: 0;
     padding-right: 0;
     max-width: none;
-  }
-
-  .galleryImgs {
-    width: auto;
   }
 
   form {
