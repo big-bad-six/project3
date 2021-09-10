@@ -72,152 +72,64 @@ export default function SignUp(props) {
     // };
 
     return (
-        <div className="form">
+        <div className="card">
+            <div className="form">
 
-            {/* <h2>Sign Up</h2>
-            <form noValidate validated={validated} onSubmit={handleFormSubmit}>
-                <div className="field">
-                    <label htmlFor="firstName">First Name:</label>
-                    <input
-                        placeholder="First"
-                        name="firstName"
-                        type="firstName"
-                        id="firstName"
-                        onChange={handleInputChange}
-                        value={userFormData.firstName}
-                    />
-                </div>
-                <div className="field">
-                    <label htmlFor="lastName">Last Name:</label>
-                    <input
-                        placeholder="Last"
-                        name="lastName"
-                        type="lastName"
-                        id="lastName"
-                        onChange={handleInputChange}
-                        value={userFormData.lastName}
-                    />
-                </div>
-                <div className="field">
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        placeholder="youremail@test.com"
-                        name="email"
-                        type="email"
-                        id="email"
-                        onChange={handleInputChange}
-                        value={userFormData.email}
-                    />
-                </div>
-                <div className="field">
-                    <label htmlFor="pwd">Password:</label>
-                    <input
-                        placeholder="******"
-                        name="password"
-                        type="password"
-                        id="pwd"
-                        onChange={handleInputChange}
-                        value={userFormData.password}
-                    />
-                </div>
-                <div className="button">
-                    <button type="submit" disabled={
-                        !(
-                            userFormData.username &&
-                            userFormData.email &&
-                            userFormData.password
-                        )
-                    }
-                        variant="success"
-                    >Submit</button>
-                </div>
-            </form> */}
-
-            {/* This is needed for the validation functionality above */}
-            <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-                {/* show alert if server response is bad */}
-                <Alert
-                    dismissible
-                    onClose={() => setShowAlert(false)}
-                    show={showAlert}
-                    variant="danger"
-                >
-                    Something went wrong with your signup!
-                </Alert>
-
-                <Form.Group>
-                    <Form.Label htmlFor="firstName">First Name</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Your firstName"
-                        name="firstName"
-                        onChange={handleInputChange}
-                        value={userFormData.firstName}
-                        required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Username is required!
-                    </Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group>
-                    <Form.Label htmlFor="lastName">Last Name</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Your lastName"
-                        name="lastName"
-                        onChange={handleInputChange}
-                        value={userFormData.lastName}
-                        required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Username is required!
-                    </Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group>
-                    <Form.Label htmlFor="email">Email</Form.Label>
-                    <Form.Control
-                        type="email"
-                        placeholder="Your email address"
-                        name="email"
-                        onChange={handleInputChange}
-                        value={userFormData.email}
-                        required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Email is required!
-                    </Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group>
-                    <Form.Label htmlFor="password">Password</Form.Label>
-                    <Form.Control
-                        type="password"
-                        placeholder="Your password"
-                        name="password"
-                        onChange={handleInputChange}
-                        value={userFormData.password}
-                        required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Password is required!
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Button
-                    disabled={
-                        !(
-                            userFormData.username &&
-                            userFormData.email &&
-                            userFormData.password
-                        )
-                    }
-                    type="submit"
-                    variant="success"
-                >
-                    Submit
-                </Button>
-            </Form>
+                <h2>Sign Up</h2>
+                <form noValidate validated={validated} onSubmit={handleFormSubmit}>
+                    <div className="field">
+                        <input
+                            placeholder="First"
+                            name="firstName"
+                            type="firstName"
+                            id="firstName"
+                            onChange={handleInputChange}
+                            value={userFormData.firstName}
+                        />
+                    </div>
+                    <div className="field">
+                        <input
+                            placeholder="Last"
+                            name="lastName"
+                            type="lastName"
+                            id="lastName"
+                            onChange={handleInputChange}
+                            value={userFormData.lastName}
+                        />
+                    </div>
+                    <div className="field">
+                        <input
+                            placeholder="youremail@test.com"
+                            name="email"
+                            type="email"
+                            id="email"
+                            onChange={handleInputChange}
+                            value={userFormData.email}
+                        />
+                    </div>
+                    <div className="field">
+                        <input
+                            placeholder="******"
+                            name="password"
+                            type="password"
+                            id="pwd"
+                            onChange={handleInputChange}
+                            value={userFormData.password}
+                        />
+                    </div>
+                    <div className="button">
+                        <button type="submit" disabled={
+                            !(
+                                userFormData.username &&
+                                userFormData.email &&
+                                userFormData.password
+                            )
+                        }
+                            variant="success"
+                        >Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
