@@ -53,4 +53,5 @@ T6 -- Final Thoughts
    We hope that you enjoy exploring this humble site of ours & that it brightened up your day a little.
 
    And now a note from a wayward soul in CrossCode as a reminder for when life gets on the hectic side.
+![Crosscode Calm](https://user-images.githubusercontent.com/79650500/132931924-34e93a1d-b91a-436b-89a1-314856116cd2.png)
 
