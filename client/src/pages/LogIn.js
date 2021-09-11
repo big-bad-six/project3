@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-// import { Link } from 'react-router-dom';
-import Auth from '../utils/auth';//
 import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
 import '.././assets/css/Form.css';
 
 export default function LogIn(props) {
 
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error }] = useMutation(LOGIN)
+  const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      // mutationResponse is greyed out because it is used in line 24 cost token
-      // we need to create an Auth in utils
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
