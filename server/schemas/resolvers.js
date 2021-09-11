@@ -2,70 +2,43 @@
 // models> index, models> profile
 // schemas> resolvers, schemas> typeDefs will all have to be changed
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile, MemeImage } = require('../models');
+const { User, MemeImage } = require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    profiles: async () => {
-      return Profile.find();
-    },
-
     memeimages: async () => {
       return MemeImage.find();
     },
 
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+    user: async (parent, { email }) => {
+      console.log('inside getUser');
+      return User.findOne({ email: email });
     },
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, password }) => {
-      const profile = await Profile.create({ name, email, password });
-      const token = signToken(profile);
+    addUser: async (parent, { firstName, lastName, email, password }) => {
+      console.log('inside addUser');
+      const user = await User.create({ firstName, lastName, email, password });
+      const token = signToken(user);
 
-      return { token, profile };
+      return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const profile = await Profile.findOne({ email });
-
-      if (!profile) {
-        throw new AuthenticationError('No profile with this email found!');
+      const user = await User.findOne({ email });
+      if (!user) {
+        throw new AuthenticationError('Incorrect username/password!');
       }
 
-      const correctPw = await profile.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
+        throw new AuthenticationError('Incorrect username/password!');
       }
 
-      const token = signToken(profile);
-      return { token, profile };
-    },
-
-    
-
-    addSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        {
-          $addToSet: { skills: skill },
-        },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
-    },
-    removeProfile: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId });
-    },
-    removeSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        { $pull: { skills: skill } },
-        { new: true }
-      );
+      const token = signToken(user);
+      return { token, user };
     },
   },
 };

@@ -1,0 +1,26 @@
+[
+  {
+    "firstName": "Brian",
+    "lastName": "Kernighan",
+    "email": "bkernighan@techfriends.dev",
+    "password": "password01"
+  },
+  {
+    "firstName": "Kent",
+    "lastName": "Beck",
+    "email": "kbeck@techfriends.dev",
+    "password": "password02"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Thomas",
+    "email": "dthomas@techfriends.dev",
+    "password": "password03"
+  },
+  {
+    "firstName": "Alap",
+    "lastName": "Raval",
+    "email": "asr@gmail.com",
+    "password": "password00"
+  }
+]

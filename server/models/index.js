@@ -1,5 +1,5 @@
 const MemeImage = require('./MemeImage');
 const MemeText = require('./MemeText');
-const Profile = require('./Profile');
+const User = require('./User');
 
-module.exports = { MemeImage, MemeText, Profile };
+module.exports = { MemeImage, MemeText, User };
