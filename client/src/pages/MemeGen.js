@@ -9,11 +9,7 @@ import legocat from '../assets/images/legoscat.jpg';
 import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 
-// To-do: Moveable text, Download Button saves new image as SVG/PNG
-
 export default function MemeGen() {
-    /* from svg to button tutorial */
-
     const handleClick = e => {
         e.preventDefault();
         let memeEl = document.querySelector('.meme');
@@ -22,8 +18,6 @@ export default function MemeGen() {
                 saveAs(blob, 'meme.png');
             });
     };
-
-    /* end of tutorial */
 
     const [inputText, setInputText] = useState({
         topText: "",
