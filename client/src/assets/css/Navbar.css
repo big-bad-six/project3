@@ -7,7 +7,6 @@
 .navbar-container {
   display: flex;
   height: 80px;
-  max-width: 1500px;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
@@ -24,6 +23,10 @@
 .main-nav {
   list-style: none;
   display: flex;
+}
+
+.mobile-nav{
+  display: none;
 }
 
 .nav-links {
@@ -44,10 +47,29 @@
   }
 
   .navbar-logo {
-    width: 15rem;
+    width: 14rem;
+    margin-left: 25px;
   }
   .nav-links {
     display: table-caption;
     font-size: 1rem;
   }
+
+
+.mobile-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  right: 20px;
+  z-index: 1;
+  font-size: 1.5em;
+}
+
+.mobile-nav a{
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
 }
