@@ -1,6 +1,3 @@
-// BAD
-// models> index, models> profile
-// schemas> resolvers, schemas> typeDefs will all have to be changed
 const { AuthenticationError } = require('apollo-server-express');
 const { User, MemeImage } = require('../models');
 const { signToken } = require('../utils/auth');

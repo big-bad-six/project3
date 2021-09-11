@@ -1,4 +1,3 @@
-//these models have to match our project models
 const { Schema, model } = require('mongoose');
 
 const memeTextSchema = new Schema({

@@ -8,28 +8,10 @@ import MemeGen from './pages/MemeGen';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
-// just import index
-
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
-
-//Auth from stripe
-
-// const httpLink = createHttpLink({
-//   uri: '/graphql',
-// });
-
-// const authLink = setContext((_, { headers }) => {
-//   const token = localStorage.getItem('id_token');
-//   return {
-//     headers: {
-//       ...headers,
-//       authorization: token ? `Bearer ${token}` : '',
-//     },
-//   };
-// });
 
 function App() {
   return (
@@ -55,7 +37,5 @@ function App() {
     </ApolloProvider>
   );
 }
-
-//import router
 
 export default App;
